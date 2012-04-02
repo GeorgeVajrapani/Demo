@@ -5,6 +5,16 @@ class MunicipalitiesController < ApplicationController
     @municipalities = Municipality.all
 
     respond_to do |format|
+	  format.js { 
+		municipalities = State.find(params[:state_id]).municipalities
+		
+		@municipalities = ''
+		municipalities.each do |m|
+		  @municipalities << "<option value =\"#{m.id}\">#{m.name}</option>"
+		 end
+		 
+		render :js => @municipalities
+	  }
       format.html # index.html.erb
       format.xml  { render :xml => @municipalities }
     end
