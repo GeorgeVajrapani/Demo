@@ -5,7 +5,7 @@ class MunicipalitiesController < ApplicationController
     @municipalities = Municipality.all
 
     respond_to do |format|
-	  format.js { 
+	  format.js {  # se agrego
 		municipalities = State.find(params[:state_id]).municipalities
 		
 		@municipalities = ''

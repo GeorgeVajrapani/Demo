@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20120402143917) do
   create_table "contacts", :force => true do |t|
     t.string   "name"
     t.datetime "birthdate"
+    t.string   "sex"
     t.string   "email"
     t.string   "street_number"
     t.string   "colony"

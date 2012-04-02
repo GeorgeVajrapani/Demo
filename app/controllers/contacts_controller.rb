@@ -26,7 +26,7 @@ class ContactsController < ApplicationController
   def new
     @contact = Contact.new
 	@states = State.order('name').all
-	@municipalities = Municipality.order('name').all
+	@municipalities = Municipality.order('name').all	
 
     respond_to do |format|
       format.html # new.html.erb
