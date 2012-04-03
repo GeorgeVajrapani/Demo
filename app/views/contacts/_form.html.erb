@@ -19,18 +19,28 @@
     <%= f.label :birthdate %><br />
     <%= f.datetime_select :birthdate %>
   </div>
- 
   
   <div class="field">
 	<%= f.label :sex %><br />
 	<div>
     <%= f.radio_button(:sex, "male") %>
-	<%= f.label(:sex_male, "male") %>
+	<%= f.label(:sex_male, "Male") %>
 	<%= f.radio_button(:sex, "female") %>
-	<%= f.label(:sex_female, "female") %>
+	<%= f.label(:sex_female, "Female") %>
+	</div>
+  </div> 
+  
+  <div class="field">
+	<%= f.label :languages %><br />
+	<div>
+    <%= f.check_box(:languages_english) %>
+	<%= f.label(:languages_english, "English") %>
+	<%= f.check_box(:languages_spanish) %>
+	<%= f.label(:languages_sapnish, "Spanish") %>
+	<%= f.check_box(:languages_german) %>
+	<%= f.label(:languages_german, "German") %>
 	</div>
   </div>
- 
   
   <div class="field">
     <%= f.label :email %><br />
